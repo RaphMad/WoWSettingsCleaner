@@ -1,0 +1,29 @@
+﻿<Window x:Class="WoWSettingsCleaner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WoWSettingsCleaner" Height="300" Width="500">
+
+   <Grid Margin="3,3,3,3">
+      <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="95" />
+         <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+         <RowDefinition Height="26" />
+         <RowDefinition Height="26" />
+         <RowDefinition Height="60" />
+         <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+
+      <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right">WoW directory:</Label>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="2,2,2,2" x:Name="PathTextBox" Text="C:\Program Files (x86)\World of Warcraft\_classic_"/>
+
+        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right">Cleanup type:</Label>
+      <ComboBox Grid.Row ="1" Grid.Column="1" Margin="2,2,2,2" Name="TypeComboBox" />
+
+      <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="2,8,2,8" Width="100" Content="Perform" HorizontalAlignment="Right" Click="HandlePerformClicked" />
+
+      <RichTextBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="3,3,3,3" Name="LogTextBox" IsReadOnly="True" VerticalScrollBarVisibility="Auto" />
+
+   </Grid>
+</Window>
